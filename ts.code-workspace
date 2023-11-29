@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "../ts"
+		},
+		{
+			"name": "typescript",
+			"path": "../ts/typescript"
+		}
+	],
+	"settings": {}
+}
