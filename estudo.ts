@@ -1,3 +1,5 @@
+import Carro from "./Carro";
+
 var exibeMensagem = function(){
     var mensagemForaDoIf = "Caleum";
     if(true){
@@ -93,6 +95,8 @@ interface Retangulo {
     comprimento: number
 };
 
+
+
 const retangulo: Retangulo = {
     altura: 20,
     comprimento:10
@@ -139,3 +143,19 @@ console.log(multiplicaInteiros(4,5));
 //Para parâmetos com valores padrão, o valor padrão vem após a anotação de tipo
 function logBase10(valor: number, base: number = 10){}
 
+let x: unknown = "Hello";
+console.log((x as string).length)
+
+let y: unknown = 'World';
+console.log((<string>y).length)
+
+var carro = new Carro("HB20", "Hyundai", 2023);
+carro.acelera();
+
+//generics
+function identidade<T>(arg: T): T {
+    return arg;
+}
+
+let numero = identidade<number>(5);      // tipo de número
+let texto = identidade<string>("Olá");  // tipo de string
